@@ -1,11 +1,15 @@
 package jp.ac.uryukyu.ie.e195709;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Answer ans = new Answer();
         ans.answer();
+
+        Answer u = new Answer();
+        u.user();
 
     }
 }
@@ -34,5 +38,15 @@ class Answer{
 
         String answer = (s + t + r);
         System.out.println(answer);
+    }
+    void user(){
+        System.out.println("３桁の数字を入力してください");
+
+        Scanner scan = new Scanner(System.in);
+        String str = scan.next();
+        System.out.println("入力された文字は「" + str + "」です");
+
+        String[] user = str.split("");
+        //System.out.println(user[1]);
     }
 }
